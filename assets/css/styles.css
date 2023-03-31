@@ -19,6 +19,10 @@
     display: block;
 }
 
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
@@ -82,8 +86,7 @@
     padding: 8px;
     border-radius: 4px;
     display: none;
-    animation: fadeIn ease-in 0.3s; 
-
+    animation: fadeIn ease-in 0.1s;
 }
 .header__qr::before {
     content: "";
@@ -120,7 +123,117 @@
     height: 16px;
 }
 
+.fa-solid,
+.fa-chevron-down {
+    margin-left: 5px;
+}
 
-.fa-solid, .fa-chevron-down{
-    margin-left: 2px;
+/* Notify */
+
+.header__notify {
+    position: absolute;
+    width: 404px;
+    top: 100%;
+    right: 0;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    cursor: default;
+    transform-origin: calc(100% - 15px) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    /* Ease-in : Chậm -> nhanh */
+    display: none;
+}
+
+.header__notify::before{
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    right: 12px;
+    top: -25px;
+    position: absolute;
+}   
+
+.header__notify::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 14px;
+    top: -14px;
+    right: 4px;
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+.header__notify-header h3 {
+    color: #999;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin-left: 6px;
+    user-select: none;
+}
+.header__notify-list {
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item:hover {
+    background-color: #f7f7f7;
+}
+
+.header__notify-item--viewed {
+    background-color: rgba(238, 77, 45, 0.09);
+}
+
+.header__notify-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: cover;
+    max-height: 50px;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+.header__notify-desc {
+    display: block;
+    font-size: 1.2rem;
+    color: #756f6e;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.header__notify-footer {
+    display: flex;
+}
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 8px 0;
+    text-align: center;
 }
