@@ -58,7 +58,7 @@
     right: -9px;
     top: 50%;
     height: 14px;
-    transform: translateY(-50%);
+    transform: translateY(-50%); 
 }
 
 .header__navbar-icon-link {
@@ -143,6 +143,7 @@
     animation: headerNotifyGrowth ease-in 0.2s;
     /* Ease-in : Chậm -> nhanh */
     display: none;
+    will-change: opacity, transform;
 }
 
 .header__notify::before{
