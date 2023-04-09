@@ -1,5 +1,5 @@
 .header {
-    height: 120px;
+    height: var(--header-heigt);
     background-image: linear-gradient(0, #ff6533, #f53d2d);
 }
 
@@ -8,7 +8,7 @@
     justify-content: space-between;
 }
 .header__navbar-list {
-    margin-top: 4px;
+    margin: 4px 0 0 0;
 }
 .header__navbar-item {
     margin: 0 8px;
@@ -58,7 +58,7 @@
     right: -9px;
     top: 50%;
     height: 14px;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
 }
 
 .header__navbar-icon-link {
@@ -146,7 +146,7 @@
     will-change: opacity, transform;
 }
 
-.header__notify::before{
+.header__notify::before {
     content: "";
     border-width: 20px 27px;
     border-style: solid;
@@ -154,9 +154,9 @@
     right: 12px;
     top: -25px;
     position: absolute;
-}   
+}
 
-.header__notify::after{
+.header__notify::after {
     content: "";
     display: block;
     position: absolute;
@@ -239,4 +239,321 @@
     text-align: center;
 }
 
-/* Modal  layout*/
+
+
+/* Authen form */
+
+.auth-form {
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.auth-form__container {
+    padding: 20px 32px;
+}
+
+.auth-form__header {
+    padding: 0 12px;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form-switch-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.auth-form__form {
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+.auth-form__input:focus {
+    border-color: #777;
+}
+
+.auth-form__aside {
+    margin-top: 20px;
+}
+
+.auth-form__policy-text {
+    font-size: 1.5rem;
+    padding: 2px 45px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.auth-form__text-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.auth-form__text-link:hover {
+    text-decoration: underline;
+}
+
+.auth-form__controls {
+    display: flex;
+    margin-top: 38px;
+    justify-content: flex-end;
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+
+.auth-form__socials {
+    position: relative;
+    /* background-color: orange; */
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    
+}
+
+.auth-form__socials-icon{
+    font-size: 2rem;
+}
+
+.auth-form__socials--facebook{
+
+    color: rgba(24, 119, 242, 1);
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,.26);
+
+}
+
+.auth-form__socials-title{
+    margin: 0 36px;
+    color: var(--text-color);
+}
+
+.auth-form__socials--google{
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.26);
+    background-color: #fff;
+    border-radius: 2px;
+    color: rgb(32 33 36);;
+
+
+}
+
+/* Login authen form */
+
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,.26);
+}
+
+.auth-form__help-separate{
+    display: block;
+    height: 20px;
+    border: 1px solid var(--border-color);
+    margin: 2px 16px 0;
+}
+
+.auth-form__forgot-link{
+    color: var(--primary-color);
+}
+
+/* Header with serach */
+
+.header-with-serach{
+     height: var(--header-with-serach-height);
+     display: flex;
+     align-items: center;
+}
+
+.header__logo{
+    width: 200px;
+}
+
+.header__logo-img{
+    width: 155px;
+}
+
+.header__serach{
+    flex: 1;
+    background-color: var(--white-color);
+    height: 40px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.header__cart{
+    width: 150px;
+    text-align: center;
+}
+
+.header__cart-wrap:hover .header__cart-list /* Khi di vào header__cart-wrap sẽ hiện ra header__cart-list */{
+    display: block;
+}
+
+.header__cart-wrap /*  mặc định kế thừa chiều ngang của div cha nên di vào các vùng xung quanh vẫn hiện, cách fix: cho nó nhỏ lại + bỏ tính chất block của nó bằng inline-block */{
+    position: relative;
+    display: inline-block;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+
+
+.header__cart-list{
+
+    display: none;
+    position: absolute;  
+    top: calc(100% + 13px);
+    right: 2px;
+    background-color: var(--white-color);
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+    animation: fadeIn ease-in 0.2s; /* thêm animation fadein để nó hiện mờ mờ từ từ ra */
+    
+}
+
+/* sử dụng lớp giả để tạo hình vuông dùng transparent: trong suốt */
+.header__cart-list::after{
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: -27px;
+    border-width: 16px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color);
+}
+
+.header__cart-list--no-cart{
+    padding: 24px 0;
+}
+.header__cart-no-cart-img{
+    width: 40%;
+}
+
+.header__cart-list-no-cart-msg{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: var(--text-color);
+ }
+
+.header__cart-icon{
+    color: var(--white-color);
+    margin-top: 6px;
+    font-size: 2.4rem;
+}
+
+.header__serach-input-wrap{
+        flex: 1;
+        height: 100%;
+        position: relative;
+}
+
+.header__serach-input{
+    width: 97%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0 10px;
+    border-radius: 2px;
+}
+
+.header__serach-btn{
+    background-color: var(--primary-color);
+    border: none;
+    height: 34px;
+    width: 60px;
+    margin-right: 4px;
+    border-radius: 2px;
+}
+
+.header__serach-btn:hover{
+        background-color: #fb6445;
+        cursor: pointer;
+}
+
+.header__serach-btn-icon{
+    margin-top: 10px;
+
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+/* Serach history */
+.header__serach-input:focus ~ .header__serach-history{
+    display: block;
+}
+.header__serach-history{
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: calc(100% - 20px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 0 5px #c7c7c7;
+    display: none;
+    overflow: hidden;
+}
+
+.header__serach-history-heading{
+    margin: 8px 12px;
+    text-align: start;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+}
+.header__serach-history-list{
+    margin: 8px 0 0;
+    text-align: start;
+}
+
+.header__serach-history-list-item{
+    height: 38px;
+    padding: 0 12px;
+
+}
+
+.header__serach-history-list-item:hover{
+    background-color: #fafafa;
+}
+.header__serach-history-link{
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    line-height: 38px;
+    font-size: 1.4rem;
+}
+
