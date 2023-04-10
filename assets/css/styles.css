@@ -440,7 +440,100 @@
     border-radius: 2px;
     box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
     animation: fadeIn ease-in 0.2s; /* thêm animation fadein để nó hiện mờ mờ từ từ ra */
+    cursor: default;
     
+}
+
+.header__cart-heading{
+    text-align: left;
+    margin: 8px 0 8px 12px;
+    font-size: 1.4rem; 
+    color: #999;
+    font-weight: 400;
+}
+
+.header__cart-list-item{
+}
+
+.header__cart-item{
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.header__cart-item:hover{
+    background-color: #F8F8F8;
+}
+.header__cart-img{
+    width: 42px;
+    height: 42px;
+    margin: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.header__cart-item-info{
+    width: 100%;
+    margin-right: 12px;
+ 
+
+}
+.header__cart-item-head{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header__cart-item-name{
+     
+    font-size: 1.4rem;
+    font-weight: 450;
+    color: var(--text-color); /* fw 500 hơi đậm nên cho nó nó cái color để tạo cảm giác cho người dùng nó mỏng hơn */ 
+}
+.header__cart-item-price{
+    font-size: 1.4rem; 
+    color: var(--primary-color);
+    font-weight: 400;
+
+}
+.header__cart-item-multiply{
+
+    font-size: 0.9rem;
+    margin: 0 4px;
+    color: #757575;
+}
+.header__cart-item-qnt{
+    font-size: 1.2rem;
+    color: #757575;
+    font-weight: 500;
+}
+.header__cart-item-body{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;    
+}
+.header__cart-item-desc{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #757575;
+}
+.header__cart-item-remove{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+
+}
+.header__cart-item-remove:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.header__cart-view-cart{
+    float: right;
+    margin: 12px 12px 12px 0;
+} 
+
+.header__cart-view-cart:hover{
+    background-color: #f05;
 }
 
 /* sử dụng lớp giả để tạo hình vuông dùng transparent: trong suốt */
@@ -452,20 +545,41 @@
     border-width: 16px 20px;
     border-style: solid;
     border-color: transparent transparent var(--white-color);
+    cursor: pointer;
 }
 
 .header__cart-list--no-cart{
     padding: 24px 0;
 }
 .header__cart-no-cart-img{
+    display: none;
     width: 40%;
 }
-
-.header__cart-list-no-cart-msg{
+.header__cart-list--no-cart .header__cart-no-cart-img, 
+.header__cart-list--no-cart .header__cart-list-no-cart-msg
+{   
+    margin-left: auto;
+    margin-right: auto;
     display: block;
+}
+.header__cart-list-no-cart-msg{
+    display: none;
     font-size: 1.5rem;
     margin-top: 20px;
     color: var(--text-color);
+ }
+ 
+ .header__cart-notice{
+    position: absolute;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    padding: 1px 7px;
+    TOP: -4px;
+    right: -5px;
+    border: 2px solid var(--primary-color);
  }
 
 .header__cart-icon{
@@ -557,3 +671,4 @@
     font-size: 1.4rem;
 }
 
+/* Cart item */
