@@ -57,7 +57,7 @@
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item--has-notify"> 
                                 <a href="" class="header__navbar-item-link">
-                                <i class="header__navbar-icon fa-regular fa-bell "></i> Thông Báo
+                                <i class="header__navbar-icon far fa-bell "></i> Thông Báo
                             </a>
 
                             <div class="header__notify">
@@ -129,16 +129,41 @@
                             </div>
                          </li>
                             <li class="header__navbar-item"><a href="" class="header__navbar-icon-link"><i class="header__navbar-icon far fa-question-circle"></i>Hỗ Trợ</a></li>
-                            <li class="header__navbar-item"><a href="" class="header__navbar-item-link "><i class="header__navbar-icon fa-thin fa-globe" style=" margin-right: 0;"></i>Tiếng Việt <i class="fa-solid fa-chevron-down " style="margin-top: 4px;"></i> </a></li>
+                            <li class="header__navbar-item"><a href="" class="header__navbar-item-link "><i class="header__navbar-icon fa-solid fa-globe"></i> Tiếng Việt <i class="fa-solid fa-chevron-down " style="margin-top: 4px;"></i> </a>
+                                <!-- <div class="header__navbar-item--language">
+                                    <span class="header__navbar-item--language-eng">English</span>
+                                    <span class="header__navbar-item--language-vn">Tiếng Việt</span>
+                                </div> -->
+                               </li>
                              
-                            <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng Ký</li> 
-                            <li class="header__navbar-item header__navbar-item--strong">Đăng Nhập</li>
+                            <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng Ký</li> 
+                            <li class="header__navbar-item header__navbar-item--strong">Đăng Nhập</li> -->
+                            <li class="header__navbar-item header__navbar-user">
+                                <img src="https://lh3.googleusercontent.com/ogw/AOLn63HORpiEteIq3jf1lZ9msc8VCs0lZHcCB0Rkm7k4xYo=s32-c-mo" alt="" class="header__navbar-user-img">
+                                <span class="header__navbar-user-name">Nhật Trần</span>
+
+                                <ul class="header__navbar-user-menu">
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Tài Khoản Của Tôi</a>
+                                    </li>
+
+                                    <li class="header__navbar-user-item">
+                                        <a href="">Đơn Mua</a>
+                                    </li>
+
+                                    <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                        <a href="">Đăng Xuất</a>
+                                    </li>
+                                </ul>
+                            </li>
+            
                         </ul>
                     </nav>
 
                     <!-- header with serach -->
                     <div class="header-with-serach">
                         <div class="header__logo">
+                           <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
                                     <!-- fill="Mã Màu" để đổ màu vào ảnh svg -->
@@ -147,6 +172,7 @@
                                     ></path>
                                 </g>
                             </svg>
+                           </a>
                         </div>
 
                         <div class="header__serach">
@@ -252,7 +278,7 @@
                                         </div>
                                     </li> 
                                 </ul>
-                                <button class="header__cart-view-cart btn btn--primary">Xem Giỏ Hàng</button>
+                                <a href="#" class="header__cart-view-cart btn btn--primary">Xem Giỏ Hàng</a>
                             </div>
                         
                             </div>
