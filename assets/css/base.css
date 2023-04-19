@@ -148,6 +148,7 @@ html {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffff;
 }
 
 .btn.btn--size-s{
@@ -163,4 +164,55 @@ html {
 .btn.btn--primary{
     color: var(--white-color);
     background-color: var(--primary-color);
+}
+
+/* slection */
+.select-input{
+    position: relative;
+    height: 34px;
+    min-width: 200px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-input__label{
+    font-size: 1.4rem;
+    margin-left: 5px;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 10px 16px;
+    display: none; 
+}
+
+.select-input__link{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 5px 0;
+}
+
+
+.select-input__link:hover{
+    color: var(--primary-color);
 }

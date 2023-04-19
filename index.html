@@ -27,7 +27,7 @@
         <div class="app">
             <header class="header">
               <div class="grid">
-                    <nav class="header__navbar">
+                    <nav class= "header__navbar">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item--separate">Kênh Người Bán</li>
                             <li class="header__navbar-item header__navbar-item--separate">Trở thành Người bán Shopee</li>
@@ -320,28 +320,35 @@
                             <div class="grid__column-10">   
                                 <div class="home-filter">
                                      <span class="home-fiter__label">Sắp xếp theo</span>
-                                     <button class="btn">Phổ Biến</button>
-                                     <button class="btn btn--primary">Mới Nhất</button>
-                                     <button class="btn">Bán Chạy</button>
+                                     <button class="home-fiter__btn btn">Phổ Biến</button>
+                                     <button class="home-fiter__btn btn btn--primary">Mới Nhất</button>
+                                     <button class="home-fiter__btn btn">Bán Chạy</button>
 
                                      <div class="select-input">
                                         <span class="select-input__label">Giá</span>
-                                        <i class="fas fa-angle-down"></i>
+                                        <i class="select-input__icon fas fa-angle-down"></i>
+                                        <ul class="select-input__list">
+                                            <li class="select-input__item">
+                                                <a href="" class="select-input__link">Giá: Thấp đến Cao</a>
+                                            </li>
+
+                                            <li class="select-input__item">
+                                                <a href="" class="select-input__link">Giá: Cao đến Thấp</a>
+                                            </li>
+                                        </ul>
                                      </div>
 
                                      <div class="home-filter__page">
                                         <span class="home-filter__page-number">
-                                            <span class="home-filter__page-currentr">1</span>
-                                            /
-                                            14
+                                            <span class="home-filter__page-current">1</span>/14
                                         </span>
 
                                         <div class="home-filter__page-control">
-                                            <a href="" class="home-filter__page-btn">
-                                                <i class="fas fa-angle-left"></i>         
+                                            <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
+                                                <i class="home-filter__page-icon  fas fa-angle-left"></i>         
                                             </a>
                                             <a href="" class="home-filter__page-btn">
-                                                <i class="fas fa-angle-right"></i>         
+                                                <i class="home-filter__page-icon fas fa-angle-right"></i>         
                                             </a>
                                         </div>
                                      </div>
