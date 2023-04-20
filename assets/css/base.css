@@ -188,6 +188,7 @@ html {
     color: rgb(131, 131, 131);
     position: relative;
     top: 1px;
+    margin-right: 5px;
 }
 
 .select-input:hover .select-input__list{
