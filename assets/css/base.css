@@ -7,6 +7,7 @@
     --text-color: #333;
     --border-color: #dbdbdb;
     --star-gold-color: #ffce3d;
+    --mall-color: #d0011b;
 
     /* Để tránh việc phải sửa đi sửa lại code nhiều lần thì ta có navbar-header có kích thước là 31px; 
     header = 120px; nên ta lấy 120px - 31px => được kích thước của header-witch-serach-height 

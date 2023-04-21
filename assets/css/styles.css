@@ -915,8 +915,8 @@
 
 /* Product item */
 .home-product-item{
+    position: relative;
     margin-top: 10px;
-    
     background-color: var(--white-color);
 }
 
@@ -997,8 +997,21 @@
 }
 
 .home-product-item__favourite{
-
-    
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    background-color: var(--mall-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    padding: 4px 6px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.home-product-item__favourite::after{
+    position: absolute;
+    content: "";
+    border-top: 20px solid green;
+    border-left: 20px solid transparent;
 }
 .home-product-item__sale-off{
 
