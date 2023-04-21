@@ -1,9 +1,12 @@
+/* Phải base sẽ chứa những thằng có khả năng trong tương lai sẽ lặp lại, nên chỉ cần css cho nó 1 lần sau này nếu có thấy nó thằng giống thì gọi tên class nó để không phải lặp lại css */ 
+
 :root {
     --primary-color: #ee4d2d;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
+    --star-gold-color: #ffce3d;
 
     /* Để tránh việc phải sửa đi sửa lại code nhiều lần thì ta có navbar-header có kích thước là 31px; 
     header = 120px; nên ta lấy 120px - 31px => được kích thước của header-witch-serach-height 

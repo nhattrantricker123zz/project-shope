@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+/* Reset.css để reset các thuộc tính các thẻ ví dụ <h> sẽ có những thuộc tính là margin, <li> sẽ có đốt chấm về mặc định bằng none hết */
 html,
 body,
 div,
