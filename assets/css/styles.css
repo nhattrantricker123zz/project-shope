@@ -992,36 +992,72 @@
     margin-left: 10px;
     
 }
-.home-product-item__name{
+.home-product-item__origin{
+    padding: 8px 0 4px 8px;
+}
+.home-product-item__from{
     color: #dadbda;
+    font-size: 1.4rem;
 }
 
-.home-product-item__favourite{
+.home-product-item__favourite{  
     position: absolute;
     top: 10px;
     left: -4px;
-    background-color: var(--mall-color);
-    color: var(--white-color);
+    color: var(--mall-color);
+    background-color: currentColor /* currentcolor sẽ ăn theo thằng color hiện tại của nó, để sau này sẽ không phải đổi màu nhiều nơi */;
     font-size: 1rem;
     padding: 4px 6px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
+.home-product-item__favourite span{
+    color: var(--white-color); /* Mục đích css nó riêng ra như thế này để sau này thay đổi màu trong color nó cũng k bị ăn theo  */
+    
+}
 .home-product-item__favourite::after{
     position: absolute;
     content: "";
-    border-top: 20px solid green;
-    border-left: 20px solid transparent;
+    border-top: 4px solid currentColor;
+    border-left: 4px solid transparent;
+    bottom: -3px;
+    left: 0;
+    filter: brightness(60%); /* độ sáng còn 60% */
 }
 .home-product-item__sale-off{
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    background-color: rgba(255, 216, 57, 0.94);
     
+}
+.home-product-item__sale-off::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-width: 0 20px /* trái, phải bằng 20 sẽ = với width 40 của thằng cha*/ 4px;
+    border-style: solid;
+    color: rgba(255, 216, 57, 0.94);
+    border-color: transparent currentColor transparent currentColor;
 }
 .home-product-item___sale-off-percent{
-
-    
+    color: #ef4d33;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    position: relative;
+    top: 3px;
 }
 .home-product-item___sale-off-label{
-
+    color:  var(--white-color);
+    font-weight: 600;
+    font-size: 1.3rem;  
+    line-height: 1.3rem;
+    position: relative;
+    top: 6px;
     
 }
