@@ -1098,3 +1098,9 @@
     top: 6px;
     
 }
+
+
+/* Pagination */
+.home-product__pagitnation{
+    margin: 40px 0 160px 0;
+}
