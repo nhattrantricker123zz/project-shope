@@ -15,7 +15,7 @@
     margin: 0 8px;
     position: relative;
     min-height: 26px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar-list-select{
@@ -759,7 +759,7 @@
     box-shadow: 0 0 5px #c7c7c7;
     display: none;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header__serach-history-heading {
