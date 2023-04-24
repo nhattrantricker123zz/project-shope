@@ -203,6 +203,8 @@
     border-radius: 4px;
     display: none;
     animation: fadeIn ease-in 0.1s;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .header__qr::before {
     content: "";
@@ -566,6 +568,8 @@
 }
 
 .header__cart-list-item {
+    height: 56vh;
+    overflow-y: auto;
 }
 
 .header__cart-item {
@@ -594,11 +598,19 @@
     justify-content: space-between;
 }
 .header__cart-item-name {
+    line-height: 2rem;
+    max-height: 4rem;
     font-size: 1.4rem;
     font-weight: 450;
-    color: var(
-        --text-color
-    ); /* fw 500 hơi đậm nên cho nó nó cái color để tạo cảm giác cho người dùng nó mỏng hơn */
+    color: var(--text-color); /* fw 500 hơi đậm nên cho nó nó cái color để tạo cảm giác cho người dùng nó mỏng hơn */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    padding-right: 16px;
+    flex: 1;
+    overflow: hidden;
+    text-align: left;
+
 }
 .header__cart-item-price {
     font-size: 1.4rem;
@@ -747,6 +759,7 @@
     box-shadow: 0 0 5px #c7c7c7;
     display: none;
     overflow: hidden;
+    z-index: 1;
 }
 
 .header__serach-history-heading {
@@ -923,8 +936,7 @@
     position: relative;
     margin-top: 10px;
     background-color: var(--white-color);
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-radius: 2px;
     box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0, 0.1);
     transition: transform ease-in 0.1s;
     will-change: transform;
@@ -936,10 +948,12 @@
 }
 
 .home-product-item__img{
+   border-top-left-radius: 2px;
+   border-top-right-radius: 2px;
    padding-top: 100%;   
    background-size: contain;
    background-repeat: no-repeat;
-   background-position: center; /* luôn luôn soi vào trọng tâm bức ảnh */
+   background-position: top center; /* luôn luôn soi vào trọng tâm bức ảnh */
 }
 
 .home-product-item__name{
@@ -1053,6 +1067,7 @@
     height: 36px;
     text-align: center;
     background-color: rgba(255, 216, 57, 0.94);
+    border-top-right-radius: 2px;
     
 }
 
