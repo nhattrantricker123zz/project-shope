@@ -8,6 +8,8 @@
     --border-color: #dbdbdb;
     --star-gold-color: #ffce3d;
     --mall-color: #d0011b;
+    --favourite-color: #f25220;
+    
 
     /* Để tránh việc phải sửa đi sửa lại code nhiều lần thì ta có navbar-header có kích thước là 31px; 
     header = 120px; nên ta lấy 120px - 31px => được kích thước của header-witch-serach-height 
@@ -66,7 +68,7 @@ html {
 .grid__column-2-4{
     padding-left: 5px; 
     padding-right: 5px; 
-    width: 17.4%;
+    width: 18.9%;
 }
 
 .grid__column-10{

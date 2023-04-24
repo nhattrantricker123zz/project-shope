@@ -914,10 +914,25 @@
 }
 
 /* Product item */
+.home-product{
+    margin-bottom: 10px;
+}
 .home-product-item{
+    display: block;
+    text-decoration: none;
     position: relative;
     margin-top: 10px;
     background-color: var(--white-color);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0, 0.1);
+    transition: transform ease-in 0.1s;
+    will-change: transform;
+}
+.home-product-item:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0,0,0, 0.05);
+
 }
 
 .home-product-item__img{
@@ -965,7 +980,7 @@
 
 .home-product-item__action{
     display: flex;
-    margin: 22px 0 20px 10px;
+    margin: 20px 0 10px 10px;
     text-align: center;
     line-height: 1.2rem;
 }
@@ -993,11 +1008,11 @@
     
 }
 .home-product-item__origin{
-    padding: 8px 0 4px 8px;
+    padding: 8px 0px 8px 10px;
 }
 .home-product-item__from{
     color: #dadbda;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .home-product-item__favourite{  
@@ -1006,15 +1021,15 @@
     left: -4px;
     color: var(--mall-color);
     background-color: currentColor /* currentcolor sẽ ăn theo thằng color hiện tại của nó, để sau này sẽ không phải đổi màu nhiều nơi */;
-    font-size: 1rem;
+    font-size: 1rem;    
     padding: 4px 6px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
 .home-product-item__favourite span{
     color: var(--white-color); /* Mục đích css nó riêng ra như thế này để sau này thay đổi màu trong color nó cũng k bị ăn theo  */
-    
 }
+
 .home-product-item__favourite::after{
     position: absolute;
     content: "";
@@ -1024,6 +1039,12 @@
     left: 0;
     filter: brightness(60%); /* độ sáng còn 60% */
 }
+
+.home-product-item__favourite--primary{
+    color: var(--favourite-color);
+}
+
+
 .home-product-item__sale-off{
     position: absolute;
     top: 0;
@@ -1034,6 +1055,7 @@
     background-color: rgba(255, 216, 57, 0.94);
     
 }
+
 .home-product-item__sale-off::after{
     content: "";
     position: absolute;
